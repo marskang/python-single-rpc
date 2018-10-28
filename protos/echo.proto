@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option py_generic_services = true;
+
+message Msg {
+    string text = 1;
+}
+
+service EchoService {
+    rpc echo(Msg) returns (Msg);
+}
